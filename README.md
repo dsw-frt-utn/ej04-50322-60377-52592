@@ -7,6 +7,6 @@ Desarrollo de software
 Ej04 
 
 # Integrantes
-50322, Ventura jacqueline jimena, venturajimena01gmail.com
-60377, Fernandez Eliana Claribel,  elianaclaribelfernandez@alu.frt.utn.edu.ar
+50322, Ventura jacqueline jimena, venturajimena01@gmail.com  <br>
+60377, Fernandez Eliana Claribel,  elianaclaribelfernandez@alu.frt.utn.edu.ar <br> 
 52592, Salazar Ana Carolina, caritosalazar1704@gmail.com
