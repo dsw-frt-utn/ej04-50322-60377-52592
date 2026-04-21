@@ -50,4 +50,10 @@ public abstract class Vehiculo {
     public String toString() {
         return patente + " - " + marca + " " + modelo + " - Sucursal: " + sucursal.getCodigo();
     }
+
+    public String getMarca() {
+        return marca;
+    }
+    
+    
 }

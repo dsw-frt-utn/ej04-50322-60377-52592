@@ -19,7 +19,7 @@ public class ListarVehiculosView extends javax.swing.JFrame {
     private void listarVehiculos(){
         ArrayList<VehiculoViewModel> vehiculos = Controlador.getVehiculos();
         vehiculosGrid.setModel(new DefaultTableModel(new Object[][] {}, 
-            new String[] { "Patente","Vehículo", "Tipo", "Sucursal", "Cap.Carga", "Km/litro", "Año", "Litros extra", "Km a recorrer" }));
+            new String[] { "Patente","Vehículo", "Tipo", "Sucursal", "Cap.Carga", "Km/litro", "Año", "Litros extra", "Km a recorrer","Marca" }));
         
         for(VehiculoViewModel vehiculo : vehiculos){
             ((DefaultTableModel)vehiculosGrid.getModel()).addRow(new Object[] {
@@ -31,7 +31,8 @@ public class ListarVehiculosView extends javax.swing.JFrame {
                 vehiculo.getKmPorLitro(),
                 vehiculo.getAnio(),
                 vehiculo.getLitrosExtra(),
-                vehiculo.getKmARecorrer()
+                vehiculo.getKmARecorrer(),
+                vehiculo.getMarca()
             });
         }
     }
