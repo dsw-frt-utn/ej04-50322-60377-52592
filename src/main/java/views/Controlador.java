@@ -1,7 +1,10 @@
 package views;
 
 import data.Persistencia;
+import domain.Marca;
+import domain.Sucursal;
 import domain.Vehiculo;
+import domain.VehiculoCombustible;
 import domain.VehiculoTipo;
 import java.util.ArrayList;
 import java.util.Map;
@@ -15,6 +18,48 @@ public class Controlador {
             vehiculos.add(new VehiculoViewModel(vehiculo));
         }
         return vehiculos;
+    }
+    
+    public static Boolean altaVehiculo(String nombre, String pais, String patente, String modelo, int anio, double capacidad, double kmLitro, double litrosExtra){
+        Marca marca = new Marca(nombre, pais);
+        Sucursal sucursal = new Sucursal("SUC01", "Av. Belgrano 1200", "Tucumán", null);
+        
+        if(nombre == null){
+            return false;
+        }
+        if(pais == null){
+            return false;
+        }
+        if(patente == null){
+            return false;
+        }
+        if(modelo == null){
+            return false;
+        }
+        if(anio == 0){
+            return false;
+        }
+        if(capacidad == 0){
+            return false;
+        }
+        if(kmLitro == 0){
+            return false;
+        }
+        if(litrosExtra == 0){
+            return false;
+        }
+        
+        
+        Persistencia.setVehiculo(new VehiculoCombustible(
+                patente,
+                marca.getNombre(),
+                modelo,
+                anio,
+                capacidad,
+                sucursal,
+                kmLitro,
+                litrosExtra));
+        return true;
     }
     
     public static double[] calcularConsumos(Map<String, Double> vehiculos){
