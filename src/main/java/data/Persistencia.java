@@ -50,6 +50,10 @@ public class Persistencia {
                 .findFirst();
     }
     
+    public static void setVehiculo(Vehiculo vehiculo){
+        vehiculos.add(vehiculo);
+    }
+    
     public static void inicializar(){
         inicializarResponsables();
         inicializarSucursales();
