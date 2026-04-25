@@ -57,6 +57,6 @@ public class Persistencia {
     public static void inicializar(){
         inicializarResponsables();
         inicializarSucursales();
-        inicializarVehiculos();
+       // inicializarVehiculos();
     }
 }

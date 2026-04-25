@@ -12,6 +12,18 @@ import java.util.Optional;
 
 public class Controlador {
     
+     public void iniciar() {
+        new MenuView(this).setVisible(true);
+    }
+
+    public void mostrarLista() {
+        new ListarVehiculosView().setVisible(true);
+    }
+
+   public void mostrarAltaVehiculoView() {
+    new AltaVehiculo().setVisible(true);
+}
+    
     public static ArrayList<VehiculoViewModel> getVehiculos(){
         ArrayList<VehiculoViewModel> vehiculos = new ArrayList<>();
         for(Vehiculo vehiculo : Persistencia.getVehiculos()) {
